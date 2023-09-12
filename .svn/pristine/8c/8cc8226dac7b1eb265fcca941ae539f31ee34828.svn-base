@@ -1,0 +1,70 @@
+$(function() {
+	$("#addPlace").click(function() {
+		var form = $('#addPlaceForm')[0];  	    
+    	// Create an FormData object          
+   		var data = new FormData(form);
+		console.log(data);
+		$.ajax({
+	        url: 'addPlace.do',
+	        type: 'POST',
+	        data: data,
+			enctype:'multipart/form-data',
+			contentType : false,
+        	processData : false,
+	        dataType: 'json',
+   			cache:false,
+	        success: function (result) {
+	            if (result){
+	                alert("성공");
+	            } else {
+					alert("실패");
+				}
+        	},
+			error: function() {
+				alert("전송 실패");
+			}
+    	});
+	});
+	
+	$("[id='accept']").click(function() {
+		var value = $(this).attr("value");
+		$.ajax({
+	        url: 'acceptPlace.do',
+	        type: 'POST',
+	        data: {unq: value},
+			enctype:'application/x-www-form-urlencoded; charset=UTF-8',
+	        dataType: 'text',
+	        success: function (result) {
+	            if (result){
+	                alert("성공");
+	            } else {
+					alert("실패");
+				}
+        	},
+			error: function() {
+				alert("전송 실패");
+			}
+    	});
+	});
+	
+	$("[id='reject']").click(function() {
+		var value = $(this).attr("value");
+		$.ajax({
+	        url: 'rejectPlace.do',
+	        type: 'POST',
+	        data: {unq: value},
+			enctype:'application/x-www-form-urlencoded; charset=UTF-8',
+	        dataType: 'text',
+	        success: function (result) {
+	            if (result){
+	                alert("성공");
+	            } else {
+					alert("실패");
+				}
+        	},
+			error: function() {
+				alert("전송 실패");
+			}
+    	});
+	});
+});

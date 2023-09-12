@@ -1,0 +1,25 @@
+package pz.controller;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import lombok.extern.slf4j.Slf4j;
+import pz.service.CafePZService;
+import pz.vo.CafePZVo;
+
+@Controller
+public class CafePZController {
+
+	@Autowired
+	CafePZService cafepzService;
+
+	@PostMapping("/cafePZWrite.do")
+	@ResponseBody
+	public boolean cafePZWrite(CafePZVo vo) throws Exception {
+		return cafepzService.cafePZWrite(vo);
+	}
+	
+}

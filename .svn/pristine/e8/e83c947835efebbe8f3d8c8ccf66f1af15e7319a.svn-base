@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pz.mapper.UserMapper">
+
+	<insert id="signup">
+		<![CDATA[
+			INSERT INTO USERINFO(
+				USERID,
+				PWD,
+				USERNAME,
+				NICKNAME,
+				INSTA,
+				RDATE,
+				AUTH,
+				EMAIL,
+				PHONE,
+				RANKS,
+				DELETE_YN
+			) VALUES (
+				#{userid},
+				#{pwd},
+				#{username},
+				#{nickname},
+				'',
+				SYSDATE,
+				'N',
+				#{email},
+				#{phone},
+				'1',
+				'N'
+			)
+		]]>
+	</insert>
+	
+	<select id="login">
+		<![CDATA[
+			SELECT
+				USERID,
+				USERNAME,
+				NICKNAME,
+				INSTA,
+				AUTH,
+				EMAIL,
+				PHONE,
+				RANKS
+			FROM
+				USERINFO
+			WHERE
+				USERID = #{userid} AND
+				PWD = #{pwd} AND
+				DELETE_YN='N'
+		]]>
+	</select>
+	
+	<select id="sessionLogin">
+		<![CDATA[
+			SELECT
+				USERID,
+				PWD,
+				USERNAME,
+				NICKNAME,
+				INSTA,
+				AUTH,
+				EMAIL,
+				PHONE,
+				RANKS
+			FROM
+				USERINFO
+			WHERE
+				USERID = #{userid} AND
+				DELETE_YN='N'
+		]]>
+	</select>
+	
+	<update id="updateUser">
+		<![CDATA[
+			UPDATE
+				USERINFO 
+			SET
+				PWD=#{changePwd},
+				USERNAME=#{username},
+				NICKNAME=#{nickname},
+				INSTA=NULL,
+				EMAIL=#{email},
+				PHONE=#{phone}
+			WHERE
+				USERID=#{userid} AND
+				DELETE_YN='N'
+		]]>
+	</update>
+	
+	<select id="idCheck">
+		<![CDATA[
+			SELECT
+				COUNT(*)
+			FROM
+				USERINFO
+			WHERE
+				USERID=#{userid} AND
+				DELETE_YN = 'N'
+		]]>
+	</select>
+	
+	<select id="nicknameCheck">
+		<![CDATA[
+			SELECT
+				COUNT(*)
+			FROM
+				USERINFO
+			WHERE
+				NICKNAME=#{nickname} AND
+				DELETE_YN = 'N'
+		]]>
+	</select>
+
+</mapper>

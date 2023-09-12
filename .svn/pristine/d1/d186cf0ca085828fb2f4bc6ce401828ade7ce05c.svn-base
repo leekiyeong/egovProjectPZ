@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pz.mapper.PlaceMapper">
+	
+	<insert id="insertPlace">
+	<![CDATA[
+		INSERT INTO PLACE(
+				UNQ,
+				ADDR,
+				PLACENAME,
+				PHOTOPATH,
+				EXPLAIN,
+				SOURCE,
+				USERID,
+				APPDATE,
+				APPLYDATE,
+				STATE,
+				DELETE_YN
+			) VALUES(
+				PLACE_SEQ.NEXTVAL,
+				#{addr},
+				#{placeName},
+				#{photoPath},
+				#{explain},
+				#{source},
+				#{userid},
+				SYSDATE,
+				null,
+				'N',
+				'N'
+			)
+		]]>
+	</insert>
+	
+	<update id="acceptPlace">
+		<![CDATA[
+			UPDATE
+				PLACE
+			SET
+				STATE = 'Y'
+			WHERE
+				UNQ = #{unq}
+		]]>
+	</update>
+	
+	<update id="rejectPlace">
+		<![CDATA[
+			UPDATE
+				PLACE
+			SET
+				DELETE_YN = 'Y'
+			WHERE
+				UNQ = #{unq}
+		]]>
+	</update>
+	
+	<select id="selectAllAddr">
+		<![CDATA[
+			SELECT
+				ADDR
+			FROM
+				PLACE
+			WHERE
+				STATE = 'Y' AND
+				DELETE_YN = 'N'
+				
+			UNION
+			
+			SELECT
+				ADDR
+			FROM
+				CAFEINFO 
+			WHERE
+				STATE = 'Y' AND
+				DELETE_YN = 'N'
+		]]>
+	</select>
+	
+	<select id="selectPlaceInfo">
+		<![CDATA[
+			select addr,placeName,photopath,explain,photopath,userid from place
+			where addr=#{addr}
+		]]>
+	</select>
+	
+</mapper>

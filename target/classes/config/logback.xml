@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{yyyy/MM/dd HH:mm:ss.SSS} %-5level --- [%thread] %logger[%method:%line] - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 기본 로거 ( Root Logger ) -->
+    <!-- 앞서 logger는 특정 패키지 (혹은 클래스) 를 위한 거였다면, root 는 모든 패키지를 의미한다. -->
+    <!-- level 미지정시 debug 기본 값사용 -->
+    <root level="DEBUG">
+        <appender-ref ref="consoleAppender" />
+    </root>
+
+</configuration>

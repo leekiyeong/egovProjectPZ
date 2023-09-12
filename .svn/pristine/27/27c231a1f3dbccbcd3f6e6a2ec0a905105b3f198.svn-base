@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pz.mapper.CafePZMapper">
+	<insert id="cafePZWrite">
+		<![CDATA[
+			insert into cafepz(unq, userid, nickname, cafename, insta, addr, photopath, title, content ) 
+				values (cafepz_seq.nextval, #{userid}, #{nickname}, #{cafename}, #{insta}, #{addr}, #{photopath}, #{title}, #{content})
+		]]>
+	</insert>
+	
+	
+	<select id="selectCafePZList">
+		<![CDATA[
+			select insta, userid, photopath from cafepz where addr = #{addr}
+		]]>
+	</select>
+</mapper>

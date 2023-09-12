@@ -1,0 +1,1781 @@
+@media ( max-width : 768px) {
+	body, html {
+		min-width: 768px;
+	}
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+	overflow: hidden; /* 스크롤 제거 */
+	height: 100%; /* 전체 화면 높이 설정 */
+}
+
+/* x 버튼 */
+#closeModalAgree {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalSignUp {
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalCafeSignUp {
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalLogin {
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalCafeLogin {
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalMyPage {
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalMyCafePage {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalLocation {
+	position: absolute;
+	top: 25px;
+	right: 35px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalAdminPage {
+	position: absolute;
+	top: 25px;
+	right: 40px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalAdminReportPage {
+	position: absolute;
+	top: 25px;
+	right: 40px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalUpdateLocationData {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalUpdateCafeLocationData {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalCafeInfo {
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalDetailCafeInfo {
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalCafeListInfo {
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalCafeListDetail {
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalCafeNoticeWrite {
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalInsengNoticeWrite {
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#closeModalCafeMenuListInfo {
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#photoZoneBox {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	background-color: black;
+	color: white;
+	padding: 15px 20px;
+	border-radius: 10px;
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	z-index: 101;
+}
+
+#userButtons_right {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#signUpButton, #loginButton,#cafePoint, #logoutButton, #cafeLogoutButton {
+	padding: 10px 20px;
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+#userButtons_left {
+	position: absolute;
+	top: 120px;
+	left: 20px;
+}
+
+#photoZoneImage {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+
+#myLocationButton,#myPageButton,#adminPageButton,#myCafePageButton{
+	padding: 10px 15px;
+	background-color: rgba(52, 152, 219, 0.6);
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	margin: 0 5px;
+}
+
+#myLocationButton:hover, #myPageButton:hover, #adminPageButton:hover ,#myCafePageButton:hover {
+    background-color: #3498db; /* 원래의 색상으로 복원 */
+}
+
+#userButtons_bottom {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex; /* 버튼들을 가로로 나란히 배치 */
+	justify-content: center; /* 가로 방향 가운데 정렬 */
+	align-items: flex-end;
+	z-index: 101;
+}
+
+#location, #list {
+	padding: 10px 15px;
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	margin: 0 5px;
+}
+
+#location img, #list img {
+	width: 15px;
+	height: 15px;
+}
+
+#mapContainer {
+	width: 100%;
+    height:100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* 약관동의모달 */
+#modalAgree {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 101;
+	background-color: white;
+	padding: 20px;
+	border-radius: 30px;
+	width: 600px;
+	height: 600px;
+}
+
+#modalAgreeWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+	width: 500px;
+	margin: 0 auto;
+	background-color: skyblue;
+}
+
+#AgreeChk {
+	width:550px;
+	text-align:right;
+	margin-top: 5px;
+}
+
+#goSignUpBox{
+	width:550px;
+	text-align:right;
+	margin-top: 5px;
+}
+
+#goSignUpButton {
+	padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* 회원가입창 */
+#modalSignUp {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 35%;
+	transform: translate(-50%, -50%);
+	z-index: 101;
+	background-color: white;
+	padding: 20px;
+	border-radius: 30px;
+	width: 500px;
+	height: 500px;
+}
+
+/* 회원가입 모달 내부 스타일 */
+#modalSignUpWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+#modalSignUpWrapper label {
+    font-weight: bold;
+}
+
+#modalSignUpWrapper input {
+    padding: 8px;
+    width: 65%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 연락처 입력란 스타일 */
+.phone-input {
+    display: flex;
+    align-items: center;
+}
+
+.phone-input input {
+    width: 70px; /* 각 입력필드 너비 조정 */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.phone-input span {
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+/* 이메일관련 css */
+.email-input {
+    display: flex;
+    align-items: center;
+}
+
+.email-input input,
+.email-input select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.email-input span {
+    font-weight: bold;
+}
+
+.input-with-button {
+    display: flex;
+    align-items: center;
+}
+
+.input-with-button input,
+.input-with-button select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.input-with-button button {
+    padding: 8px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 회원가입 전송 박스 */
+#signUpSubmit {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 100%;
+}
+
+#signUpSubmit:hover/* , #SignUpCancel:hover */ {
+    background-color: #2980b9;
+}
+
+#signUp:hover, #login:hover {
+	background-color: #2980b9;
+}
+
+/* 사업자회원가입 */
+#modalCafeSignUp {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%, -50%);
+	z-index: 101;
+	background-color: white;
+	padding: 20px;
+	border-radius: 30px;
+	width: 500px;
+	max-height: 80vh;	
+}
+
+/* 사업자회원가입 모달 내부 스타일 */
+#modalCafeSignUpWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 100%;
+    padding: 15px;
+}
+
+#modalCafeSignUpWrapper label {
+    font-weight: bold;
+}
+
+#modalCafeSignUpWrapper input {
+    padding: 8px;
+    width: 65%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 사업자회원가입 연락처 입력란 스타일 */
+.cafe-phone-input {
+    display: flex;
+    align-items: center;
+}
+
+.cafe-phone-input input {
+    width: 70px; /* 각 입력필드 너비 조정 */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cafe-phone-input span {
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+/* 사업자회원가입 이메일 입력란 스타일 */
+.cafe-email-input {
+    display: flex;
+    align-items: center;
+}
+
+.cafe-email-input input,
+.cafe-email-input select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.cafe-email-input span {
+    font-weight: bold;
+}
+
+/* 사업자회원가입 입력란과 버튼을 감싸는 div 스타일 */
+.cafe-input-with-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.cafe-input-with-button input,
+.cafe-input-with-button select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.cafe-input-with-button button {
+    padding: 8px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 사업자회원가입 전송 박스 */
+#CafeSignUpSubmit {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 100%;
+}
+
+#CafeSignUpSubmit:hover {
+    background-color: #2980b9;
+}
+
+/* 로그인모달 */
+#modalLogin {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    width: 320px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#modalLoginWrapper {
+    text-align: center;
+}
+
+#modalLoginWrapper h2 {
+    margin-bottom: 15px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-field {
+    padding: 8px;
+    width: calc(100% - 16px); /* 좌우 8px 여백 제외 */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.input-field:focus {
+    border-color: #3498db;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #3498db;
+    background-color: white;
+    padding: 0 5px;
+}
+
+#modalLoginWrapper button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+#LoginSubmit:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+#loginOptions {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#loginOptions a {
+    margin: 0 5px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+#socialLogin {
+    margin-top: 20px;
+}
+
+#socialLogin button {
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+#goSignUp {
+    margin-top: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#goSignUp p {
+    margin: 0;
+    margin-right: 5px;
+}
+
+#goSignUpButton2 {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* 사업자 로그인모달 */
+#modalCafeLogin {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 102;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    width: 320px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#modalCafeLoginWrapper {
+    text-align: center;
+}
+
+#modalCafeLoginWrapper h2 {
+    margin-bottom: 15px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-field {
+    padding: 8px;
+    width: calc(100% - 16px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.input-field:focus {
+    border-color: #3498db;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #3498db;
+    background-color: white;
+    padding: 0 5px;
+}
+
+#modalCafeLoginWrapper button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+#LoginCafeSubmit:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+#loginCafeOptions {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#loginCafeOptions a {
+    margin: 0 5px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+#goSignUpButton3 {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* 마이페이지모달*/
+#modalMyPage {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+	z-index: 101;
+	background-color: white;
+	padding: 20px;
+	border-radius: 30px;
+	width: 500px;
+	height: 500px;
+}
+
+#modalMyPageWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+#modalMyPageWrapper label {
+    font-weight: bold;
+}
+
+#modalMyPageWrapper input {
+    padding: 8px;
+    width: 65%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 연락처 입력란 스타일 */
+.phone-input {
+    display: flex;
+    align-items: center;
+}
+
+.phone-input input {
+    width: 70px; /* 각 입력필드 너비 조정 */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.phone-input span {
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+/* 이메일관련 css */
+.email-input {
+    display: flex;
+    align-items: center;
+}
+
+.email-input input,
+.email-input select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+#emailId {
+	width: 47%;
+}
+
+.email-input span {
+    font-weight: bold;
+}
+
+.input-with-button {
+    display: flex;
+    align-items: center;
+}
+
+.input-with-button input,
+.input-with-button select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.input-with-button button {
+    padding: 8px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#myPageModifyButton {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 460px;
+    height: 50px;
+}
+
+#myPageModifyButton button {
+	padding: 8px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 마이(사업자)페이지모달*/
+#modalMyCafePage {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+	z-index: 101;
+	background-color: white;
+	padding: 20px;
+	border-radius: 30px;
+	width: 500px;
+	height: 500px;
+}
+
+#modalMyCafePageWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+#modalMyCafePageWrapper label {
+    font-weight: bold;
+}
+
+#modalMyCafePageWrapper input {
+    padding: 8px;
+    width: 65%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#cafeModifyButton {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 460px;
+    height: 50px;
+}
+
+#cafeModifyButton button {
+	padding: 8px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 연락처 입력란 스타일 */
+.phoneCafe-input {
+    display: flex;
+    align-items: center;
+}
+
+.phoneCafe-input input {
+    width: 70px; /* 각 입력필드 너비 조정 */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.phoneCafe-input span {
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.input-withcafe-button {
+    display: flex;
+    align-items: center;
+}
+
+.input-withcafe-button input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.input-withcafe-button button {
+    padding: 8px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cafePageButton {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 50px;
+}
+
+#cafePageButton button{
+	padding: 8px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:5px;
+}
+
+/* 위치추가 모달 스타일 */
+#modalLocation {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    width: 600px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* 위치추가모달 내부 스타일 */
+#modalLocationWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+#modalLocationWrapper h2 {
+    margin-bottom: 5px;
+}
+
+#modalLocationWrapper p {
+    margin-bottom: 5px;
+}
+
+#modalLocationWrapper form {
+    margin-top: 10px;
+}
+
+#modalLocationWrapper label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#modalLocationWrapper input,
+#modalLocationWrapper textarea,
+#modalLocationWrapper select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    box-sizing: border-box;
+    width:300px;
+}
+
+#modalLocationWrapper .checkbox label {
+    font-weight: normal;
+}
+
+#modalLocationWrapper .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#modalLocationWrapper button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#modalLocationWrapper button:hover {
+    background-color: #2980b9;
+}
+
+/* 관리자페이지 모달 */
+#modalAdminPage {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    width: 950px; /* 변경된 가로 크기 */
+    height: 600px; /* 변경된 세로 크기 */
+    box-sizing: border-box;
+}
+
+#modalAdminPageWrapper {
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+#modalAdminPageWrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#modalAdminPageWrapper th,
+#modalAdminPageWrapper td {
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#modalAdminPageWrapper th {
+    background-color: #3498db;
+    color: white;
+}
+
+#modalAdminPageWrapper ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#modalAdminPageWrapper ul li {
+    margin-bottom: 10px;
+}
+
+/* 관리자 리폿페이지 모달 */
+#modalAdminReportPage {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    width: 950px; /* 변경된 가로 크기 */
+    height: 600px; /* 변경된 세로 크기 */
+    box-sizing: border-box;
+}
+
+#modalAdminReportPageWrapper {
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+#modalAdminReportPageWrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#modalAdminReportPageWrapper th,
+#modalAdminReportPageWrapper td {
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#modalAdminReportPageWrapper th {
+    background-color: #3498db;
+    color: white;
+}
+
+#modalAdminReportPageWrapper ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#modalAdminReportPageWrapper ul li {
+    margin-bottom: 10px;
+}
+
+/* 위치 등록 허가 모달 스타일 */
+#modalUpdateLocationData {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    width: 500px;
+    height: 500px;
+}
+
+/* 위치 등록 허가 모달 내부 스타일 */
+#modalUpdateLocationDataWrapper {
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+#modalUpdateLocationDataWrapper h2 {
+    margin-bottom: 10px;
+}
+
+#modalUpdateLocationDataWrapper form {
+    margin-top: 20px;
+}
+
+#modalUpdateLocationDataWrapper label {
+    font-weight: bold;
+}
+
+#modalUpdateLocationDataWrapper input,
+#modalUpdateLocationDataWrapper textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#modalUpdateLocationDataWrapper .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+#modalUpdateLocationDataWrapper button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#modalUpdateLocationDataWrapper button:hover {
+    background-color: #2980b9;
+}
+
+/* 카페 등록 허가 모달 스타일 */
+#modalUpdateCafeLocationData {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    width: 500px;
+    height: 500px;
+}
+
+/* 카페 등록 허가 모달 내부 스타일 */
+#modalUpdateCafeLocationDataWrapper {
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+#modalUpdateCafeLocationDataWrapper h2 {
+    margin-bottom: 10px;
+}
+
+#modalUpdateCafeLocationDataWrapper form {
+    margin-top: 20px;
+}
+
+#modalUpdateCafeLocationDataWrapper label {
+    font-weight: bold;
+}
+
+#modalUpdateCafeLocationDataWrapper input,
+#modalUpdateCafeLocationDataWrapper textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#modalUpdateCafeLocationDataWrapper .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+#modalUpdateCafeLocationDataWrapper button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#modalUpdateCafeLocationDataWrapper button:hover {
+    background-color: #2980b9;
+}
+
+/* 핀포인트 클릭시 카페 정보 모달 스타일 */
+#modalCafeInfo {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 카페 정보 모달 내부 스타일 */
+#modalCafeInfoWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+#modalCafeInfoHeader {
+    display: flex;
+    align-items: center;
+}
+
+#modalCafeInfoHeader h3 {
+    margin-bottom: 10px;
+}
+
+#detailButton {
+    padding: 3px 8px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 80px;
+    margin:5px;
+}
+
+#cafeNoticeList {
+    padding: 3px 8px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 80px;
+    margin:5px;
+}
+
+#modalCafeInfoContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cafeImage {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#cafeIdName {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#cafeName {
+    margin-bottom: 10px;
+}
+#socialButtons {
+    display: flex;
+    gap: 10px;
+}
+
+#likeButton,
+#instagramButton {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 카페정보 자세히보기버튼 클릭시 모달 */
+#modalDetailCafeInfo {
+    display: none;
+    position: fixed;
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 600px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 카페자세히보기 모달 내부 스타일 */
+#modalDetailCafeInfoWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+#modalDetailCafeInfoHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modalDetailCafeInfoHeader h3,h4 {
+     margin: 5px 0;
+}
+
+#modalDetailCafeInfoContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modalDetailCafeInfoContent table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#modalDetailCafeInfoContent td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+#modalDetailCafeInfoContent img {
+    max-width: 50px;
+    max-height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.flex-row {
+    display: flex;
+    gap: 10px;
+}
+
+/* 관리자페이지 왔다리 갔다리 버튼 */
+.arrow-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin-top: 15px;
+}
+
+.arrow-button {
+    width: 100px;
+    height: 50px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* 카페목록보기 버튼 클릭시 모달 */
+#modalCafeListInfo {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 590px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 카페목록보기 모달 내부 스타일 */
+#modalCafeListInfoWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+#modalCafeListInfoHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modalCafeListInfoContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#modalCafeListInfoContent table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#modalCafeListInfoContent td {
+    border: 1px solid #ccc;
+    padding: 5px; /* 줄인 높이에 맞게 padding 조정 */
+    text-align: center;
+    vertical-align: middle; /* 내용 중앙 정렬 */
+	height: 80px;
+}
+
+#modalCafeListInfoContent img {
+    max-width: 100px; /* 이미지 너비 조정 */
+    max-height: 80px; /* 이미지 높이 조정 */
+    display: block;
+    margin: 0 auto;
+}
+
+#modalCafeListInfoContent .cafe-details {
+    text-align: left; /* 텍스트를 좌측으로 정렬 */
+}
+
+#modalCafeListInfoContent .cafe-details p {
+    margin-top: 5px;
+}
+
+#flex-container2 {
+    display: flex;
+    align-items: center;
+}
+
+#flex-container2 div {
+    display: inline-block;
+}
+
+#flex-container2 img {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+/* 카페(사업자페이지)메뉴목록 버튼 클릭시 모달 */
+#modalCafeMenuListInfo {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 102;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 590px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 카페메뉴보기 모달 내부 스타일 */
+#modalCafeMenuListInfoWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+#modalCafeMenuListInfoHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modalCafeMenuListInfoContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#modalCafeMenuListInfoContent table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#modalCafeMenuListInfoContent td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+	height: 80px;
+}
+
+#modalCafeMenuListInfoContent img {
+    max-width: 100px; 
+    max-height: 80px; 
+    display: block;
+    margin: 0 auto;
+}
+
+#modalCafeMenuListInfoContent .cafeMenu-details {
+    text-align: left;
+}
+
+#modalCafeMenuListInfoContent .cafeMenu-details p {
+    margin-top: 5px;
+}
+
+/* 카페목록에서 사진클릭시 모달 */
+#modalCafeListDetail {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 800px;
+    height: 600px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 카페목록에서 사진클릭시 모달 내부 스타일 */
+#modalCafeListDetailWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+}
+
+#modalCafeListDetailHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+#cafeListDetailButtons{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+}
+
+#cafeListDetailButtons button {
+    padding: 8px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:5px;
+}
+
+/* 카페목록에서 게시글작성 모달 */
+#modalCafeNoticeWrite {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 600px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#modalCafeNoticeWriteWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+#modalCafeNoticeWriteHeader{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cafePhotoTable {
+	width:300px;
+	height:300px;
+	background-color:gray;
+	text-align: center;
+}
+
+#modalCafeNoticeWriteWrapper .cafeNoticeWriteContent {
+	text-align:left;
+	margin-left:35px;
+	margin-top:30px;
+}
+
+#modalCafeNoticeWriteWrapper button {
+	padding: 3px 8px;
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-left:5px;
+}
+
+#cafeNoticeWriteSubmit {
+	margin-top:8px;
+	text-align:center;
+}
+
+/* 인생샷 게시글 작성 */
+#modalInsengNoticeWrite {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 600px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#modalInsengNoticeWriteWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+#modalInsengNoticeWriteHeader{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#insengPhotoTable {
+	width:300px;
+	height:300px;
+	background-color:gray;
+	text-align: center;
+}
+
+#modalInsengNoticeWriteWrapper .insengNoticeWriteContent {
+	text-align:left;
+	margin-left:35px;
+	margin-top:30px;
+}
+
+#modalInsengNoticeWriteWrapper button {
+	padding: 3px 8px;
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-left:5px;
+}
+
+#insengNoticeWriteSubmit {
+	margin-top:8px;
+	text-align:center;
+}

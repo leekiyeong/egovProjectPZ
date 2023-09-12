@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pz.mapper.AdminMapper">
+	
+	<select id="selectUserInfos">
+		<![CDATA[
+			SELECT
+				USERID,
+				NICKNAME,
+				INSTA,
+				EMAIL,
+				TO_CHAR(RDATE, 'yyyy-MM-dd') AS RDATE,
+				CASE RANKS
+					WHEN '1' THEN '일반회원'
+                    END AS RANKS,
+				CASE AUTH
+					WHEN 'N' THEN '일반회원'
+					WHEN 'Y' THEN '관리자'
+					WHEN 'M' THEN '최상위 관리자'
+                    END AS AUTH,
+				CASE DELETE_YN
+					WHEN 'N' THEN '미삭제'
+					WHEN 'Y' THEN '삭제'
+                    END AS DELETE_YN
+			FROM
+				USERINFO
+		]]>
+	</select>
+	
+	<select id="selectWaitPlaces">
+		<![CDATA[
+			SELECT
+				P.UNQ,
+				P.ADDR,
+				P.PLACENAME,
+				P.PHOTOPATH,
+				P.EXPLAIN,
+				P.SOURCE,
+				TO_CHAR(P.APPDATE, 'yyyy-MM-dd') AS APPDATE,
+                U.NICKNAME
+			FROM
+				PLACE P,
+                USERINFO U
+			WHERE
+				P.STATE = 'N' AND
+				P.DELETE_YN = 'N' AND
+                P.USERID = U.USERID
+		]]>
+	</select>
+	
+</mapper>

@@ -1,0 +1,36 @@
+package pz.vo;
+
+import java.util.Arrays;
+import java.util.List;
+
+import lombok.Data;
+
+@Data
+public class CafeMenuVo {
+
+	private String cafeid;
+	
+	private String cafename;
+	private String addr;
+	private String insta;
+	private String opentime;
+	private String closetime;
+	private String menuname;
+	private String price;
+	private String menupath;
+	
+	private List<String> menuNames;
+	private List<String> prices;
+	private List<String> menuPaths;
+	
+	/**
+	 * sql 정보 자르기
+	 * @author hi-guri
+	 */
+	public void setMenuLists() {
+		menuNames = Arrays.asList(menuname.split(","));
+		prices = Arrays.asList(price.split(","));
+		menuPaths = Arrays.asList(menupath.split(","));
+	}
+	
+}

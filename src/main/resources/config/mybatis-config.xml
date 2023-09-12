@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0/EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="userVo" type="pz.vo.UserVo"/>
+		<typeAlias alias="cafeVo" type="pz.vo.CafeVo"/>
+		<typeAlias alias="cafePZVo" type="pz.vo.CafePZVo"/>
+		<typeAlias alias="loginVo" type="pz.vo.LoginVo"/>
+		<typeAlias alias="placeVo" type="pz.vo.PlaceVo"/>
+		<typeAlias alias="mainVo" type="pz.vo.MainVO"/>
+		<typeAlias alias="pzVo" type="pz.vo.PZVo"/>
+		<typeAlias alias="cafeMenuVo" type="pz.vo.CafeMenuVo"/>
+	</typeAliases>
+</configuration>

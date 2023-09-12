@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pz.mapper.CafeMapper">
+
+	<insert id="signup">
+		<![CDATA[
+			insert into cafeinfo(cafeid, pwd, cafename, insta, addr, photopath, certifypath, rdate, phone, delete_yn ) 
+				values (#{cafeid}, #{pwd}, #{cafename}, #{insta}, #{addr}, #{photopath}, #{certifypath}, sysdate, #{phone}, 'N' )
+		]]>
+	</insert>
+	
+
+	
+	<select id="login">
+		<![CDATA[
+			select cafeid, cafename, addr, insta, phone
+				from cafeinfo where cafeid = #{cafeid} and pwd = #{pwd} and delete_yn='N' and state='Y'
+		]]>
+	</select>
+	
+	<select id="sessionLogin">
+		<![CDATA[
+			SELECT cafeid, pwd, cafename, addr, insta, phone from cafeinfo where cafeid = #{cafeid} and delete_yn='N' and state='Y'
+		]]>
+	</select>
+	
+	<update id="updateCafe">
+		<![CDATA[
+			update cafeinfo  set pwd=#{changepwd}, cafename=#{cafename}, insta=#{insta}, phone=#{phone}
+				where cafeid=#{cafeid} and delete_yn='N' and state='Y'
+		]]>
+	</update>
+	
+	<select id="idCheck">
+		<![CDATA[
+			select count(*) from cafeinfo where cafeid=#{cafeid} and delete_yn = 'N'
+		]]>
+	</select>
+	
+	<select id="cafenameCheck">
+		<![CDATA[
+			select count(*) from cafeinfo where cafename=#{cafename} and delete_yn = 'N'
+		]]>
+	</select>
+
+
+
+</mapper>

@@ -1,0 +1,136 @@
+/**
+ * 
+ */
+$(function() {
+	 //위치추가 모달열림
+	$("#location").click(function() {
+	     $("#modalLocation").css("display", "block");
+	 });
+	//관리자페이지 모달열림
+	$("#adminPageButton").click(function() {
+	     $("#modalAdminPage").css("display", "block");
+	 });
+	 //위치등록 허가 모달
+	$("#updateLocationData").click(function() {
+	     $("#modalUpdateLocationData").css("display", "block");
+	 });
+	//카페등록 허가 모달
+	$("#updateCafeLocationData").click(function() {
+	     $("#modalUpdateCafeLocationData").css("display", "block");
+	 });
+	
+	 //핀포인트 클릭시 카페인포
+	$("#cafePoint").click(function() {
+	     $("#modalCafeInfo").css("display", "block");
+	 });
+	//자세히보기 버튼 클릭시
+	$("#detailButton").click(function() {
+	     $("#modalDetailCafeInfo").css("display", "block");
+	 });
+ 	//핀포인트로 카페열고 내부 목록보기 버튼누를시 카페글 목록 모달열림
+	$("#cafeNoticeList").click(function() {
+	     $("#modalCafeListInfo").css("display", "block");
+	 });
+	//카페 게시글 쓰기
+	$("#cafeNoticeWrite").click(function() {
+	    $("#modalCafeNoticeWrite").css("display", "block");
+	});
+	//카페 목록보기에서 사진클릭시 게시글나오기
+	$("#cafeListDetail").click(function() {
+	    $("#modalCafeListDetail").css("display", "block");
+	});
+	 
+	/* ============================로그인창처리=========================================== */
+	$(".input-field").on("input", function() {
+	    var idValue = $("#userid").val();
+	    var passwordValue = $("#pwd").val();
+	    
+	    if (idValue !== "" && passwordValue !== "") {
+	        $("#LoginSubmit").prop("disabled", false);
+	    } else {
+	        $("#LoginSubmit").prop("disabled", true);
+	    }
+	});
+	/* ============================로그인창처리=========================================== */
+	$(".input-field2").on("input", function() {
+	    var idValue = $("#cafeid").val();
+	    var passwordValue = $("#pwd").val();
+	    
+	    if (idValue !== "" && passwordValue !== "") {
+	        $("#cafeLoginSubmit").prop("disabled", false);
+	    } else {
+	        $("#cafeLoginSubmit").prop("disabled", true);
+	    }
+	});
+	/* ============================로그아웃버튼=========================================== */
+		$("#logoutButton").click(function() {
+		location.href='/pz/logout.do';
+	});
+	/* ============================로그아웃버튼=========================================== */
+		$("#cafeLogoutButton").click(function() {
+		location.href='/pz/cafeLogout.do';
+	});
+	/*==============================닫기버튼==================================*/
+	$("#closeModalLocation").click(function() {
+	    $("#modalLocation").fadeOut();
+	});
+	$("#locationCancelButton").click(function() {
+	    $("#modalLocation").fadeOut();
+	});
+	$("#closeModalAdminPage").click(function() {
+	    $("#modalAdminPage").fadeOut();
+	});
+	$("#closeModalUpdateLocationData").click(function() {
+	    $("#modalUpdateLocationData").fadeOut();
+	});
+	$("#closeModalUpdateCafeLocationData").click(function() {
+	    $("#modalUpdateCafeLocationData").fadeOut();
+	});
+	$("#closeModalCafeInfo").click(function() {
+	    $("#modalCafeInfo").fadeOut();
+	});
+	$("#closeModalDetailCafeInfo").click(function() {
+	    $("#modalDetailCafeInfo").fadeOut();
+	});
+	$("#closeModalCafeListInfo").click(function() {
+	    $("#modalCafeListInfo").fadeOut();
+	});
+	$("#closeModalCafeNoticeWrite").click(function() {
+	    $("#modalCafeNoticeWrite").fadeOut();
+	});
+	$("#closeModalCafeListDetail").click(function() {
+	    $("#modalCafeListDetail").fadeOut();
+	});
+	
+	// 모달 컨텐츠 클릭 시 닫히지 않도록
+	$("#modalAgree").click(function(e) {
+	    e.stopPropagation();
+	});
+	
+	$("#modalSignUp").click(function(e) {
+	    e.stopPropagation();
+	});
+	
+	$("#modalLogin").click(function(e) {
+	    e.stopPropagation();
+	});
+	
+	$("#modalMyPage").click(function(e) {
+	    e.stopPropagation();
+	});
+	
+	$("#modalLocation").click(function(e) {
+	    e.stopPropagation();
+	});
+});
+	
+function handleEmailDomainChange(selectElement) {
+    var emailInput = document.getElementById("email");
+    if (selectElement.value === "custom") {
+        emailInput.style.display = "block";
+        emailInput.required = true;
+    } else {
+        emailInput.style.display = "none";
+        emailInput.required = false;
+    }
+}

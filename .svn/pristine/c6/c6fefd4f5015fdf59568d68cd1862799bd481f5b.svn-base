@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pz.mapper.CafeMapper">
+
+	<insert id="signup">
+		<![CDATA[
+			insert into cafeinfo(cafeid, pwd, cafename, insta, addr, photopath, certifypath, rdate, phone, delete_yn ) 
+				values (#{cafeid}, #{pwd}, #{cafename}, #{insta}, #{addr}, #{photopath}, #{certifypath}, sysdate, #{phone}, 'N' )
+		]]>
+	</insert>
+	
+	<select id="login">
+		<![CDATA[
+			select cafeid, cafename, addr, insta, phone
+				from cafeinfo where cafeid = #{cafeid} and pwd = #{pwd} and delete_yn='N' and state='Y'
+		]]>
+	</select>
+	
+	<select id="sessionLogin">
+		<![CDATA[
+			SELECT cafeid, pwd, cafename, addr, insta, phone from cafeinfo where cafeid = #{cafeid} and delete_yn='N' and state='Y'
+		]]>
+	</select>
+	
+	<update id="updateCafe">
+		<![CDATA[
+			update cafeinfo  set pwd=#{changepwd}, cafename=#{cafename}, insta=#{insta}, phone=#{phone}
+				where cafeid=#{cafeid} and delete_yn='N' and state='Y'
+		]]>
+	</update>
+	
+	<select id="idCheck">
+		<![CDATA[
+			select count(*) from cafeinfo where cafeid=#{cafeid}
+		]]>
+	</select>
+	
+	<select id="cafenameCheck">
+		<![CDATA[
+			select count(*) from cafeinfo where cafename=#{cafename}
+		]]>
+	</select>
+	
+	 <!-- cafeid를 사용하여 카페 상태를 승인으로 변경하는 업데이트 쿼리 -->
+    <update id="approveCafe">
+    	<![CDATA[
+	       UPDATE cafeinfo
+	       SET state = 'Y'
+	       WHERE cafeid = #{cafeid}
+        ]]>
+    </update>
+    
+    <!-- cafeid를 사용하여 카페등록을 거절하는 딜리트 쿼리 -->
+    <delete id="rejectCafe">
+	    <![CDATA[
+	        DELETE FROM cafeinfo
+	        WHERE cafeid = #{cafeid}
+	    ]]>
+	</delete>
+	
+	<select id="selectCafeInfo">
+		<![CDATA[
+			select cafeid,cafename,insta,addr,photopath,certifypath from cafeinfo
+			where addr=#{addr}
+		]]>
+	</select>
+	
+	<!-- cafeid를 사용하여 카페 상세정보를 출력하는 셀렉트 쿼리 -->
+	<select id="getCafeInfoById">
+		<![CDATA[
+			select cafeid,cafename,addr,insta,phone,photopath,certifypath from cafeinfo
+			where cafeid=#{cafeid}
+		]]>
+	</select>
+	
+	<select id="findByAddr">
+		<![CDATA[
+			select count(*) from cafeinfo
+			where addr=#{addr}
+		]]>
+	</select>
+	
+	<select id="getCafeMenu">
+		<![CDATA[
+			SELECT
+				CAFENAME,
+				INSTA,
+				ADDR,
+				TO_CHAR(OPENTIME, 'HH24:MI') AS OPENTIME,
+				TO_CHAR(CLOSETIME, 'HH24:MI') AS CLOSETIME,
+				MENUNAME,
+				MENUINFO,
+				PRICE,
+				MENUPATH,
+				SIGNATURE
+			FROM
+				CAFEMENUINFO
+			WHERE
+				ADDR = #{addr} AND
+                DELETE_YN = 'N'
+		]]>
+	</select>
+	
+	<insert id="addCafeMenu">
+		<![CDATA[
+			INSERT INTO CAFEMENUINFO(
+				CAFEID,
+				CAFENAME,
+				ADDR,
+				INSTA,
+				OPENTIME,
+				CLOSETIME,
+				MENUNAME,
+				MENUINFO,
+				PRICE,
+				MENUPATH,
+				SIGNATURE,
+				DELETE_YN
+			) VALUES (
+				#{cafeid},
+				#{cafename},
+				#{addr},
+				#{insta},
+				#{opentime},
+				#{closetime},
+				#{menuname},
+				'111',
+				#{price},
+				#{menupath},
+				'N',
+				'N'
+			)
+		]]>
+	</insert>
+	
+	<update id="updateCafeLikes">
+		<![CDATA[
+			UPDATE cafeinfo
+				SET likes = likes + 1 where addr = #{addr}
+		]]>
+	</update>
+	
+	<select id="getCafeInstaId">
+		<![CDATA[
+			SELECT insta
+				FROM cafeinfo WHERE addr = #{addr}
+		]]>
+	</select>
+	
+</mapper>

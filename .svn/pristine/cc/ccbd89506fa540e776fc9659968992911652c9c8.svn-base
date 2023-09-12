@@ -1,0 +1,60 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<script>
+$(document).ready(function(){
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#cafePhotoTable').css('background-image', 'url(' + e.target.result + ')');
+            }
+
+            reader.readAsDataURL(input.files[0]); // convert to base64 string
+        }
+    }
+
+    $("#cafepzPhoto").change(function() {
+        readURL(this);
+    });
+});
+</script>
+    
+    
+    <!-- 아아 -->
+<!-- 게시물 작성(카페) -->
+<div id="modalCafePZWrite">
+	<form id="cafepzWriteForm">
+	<div id="modalCafePZWriteWrapper">
+		<div id="modalCafePZWriteHeader">
+			<h2>게시물 작성</h2>
+		</div>
+		<div class="cafePZWriteContent">
+		<div id="cafePhotoTable" style="margin-left: auto; margin-right: auto;">
+			<label for="cafepzPhoto">사진등록</label>
+	         <input type="file" id="cafepzPhoto" name="photo">
+		</div>
+		    <input type="hidden" name="userid" value="${userVo.userid}">
+			<input type="hidden" name="nickname" value="${userVo.nickname}">
+			<input type="hidden" name="insta" value="${userVo.insta}">
+			<div>
+				주소 <input type="text" id=cafepzaddr name="addr" placeholder="주소를 검색해주세요"><button id="cafeNoticeWriteLocation">위치찾기</button>
+			</div>
+			<div>
+				카페 <input type="text" id=cafepzname name="cafename"  placeholder="카페를 선택해주세요"><button id="cafeNoticeWriteCafe">카페찾기</button>
+			</div>		
+			<div>
+				제목 <input type="text" id=cafepztitle name="title"  placeholder="-">		
+			</div>
+			<div>
+				내용 <input type="text" id=cafepzcontent name="content" placeholder="-">		
+			</div>
+			<div id="cafePZWriteSubmit">
+				<button id="cafePZWriteSubmitButton">등록하기</button>
+			</div>
+		</div>
+		</div>
+		</form>
+	<span id="closeModalCafePZWrite">&times;</span>
+</div>

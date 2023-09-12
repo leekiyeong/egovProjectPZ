@@ -1,0 +1,24 @@
+package pz.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import pz.service.PZService;
+import pz.vo.PZVo;
+
+@Controller
+public class PZController {
+
+	@Autowired
+	PZService pzService;
+	
+
+	@PostMapping("/PZWrite.do")
+	@ResponseBody
+	public boolean PZWrite(PZVo vo) throws Exception {
+		return pzService.PZWrite(vo);
+	}
+	
+}
